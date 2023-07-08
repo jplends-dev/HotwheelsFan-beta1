@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Agdasima', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: normal;
+
+}
+
+body{
+    background-color: #eaeaea;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+    /*cabeçalho*/
+
+.heade{
+
+    height: 150px;
+    width: 100%;
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(54, 54, 54)) ;
+    color: white;
+    
+
+}
+      
+
+    /*NavBar*/
+
+nav{
+    width:100%;
+    background-color: black;
+    color: white;
+    padding: 2px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    list-style: none;
+  }
+  
+
+h1{
+    color: white;
+    font-size: medium;
+    cursor: pointer;
+    font-size: 120%;
+}
+
+h2{
+    font-size: 23px;
+}
+
+h3{
+    font-size: 400%;
+    text-align: center;
+    align-items: center;
+}
+ 
+main.cards{
+    display: flex;
+    padding: 32px;
+    justify-content: center;
+}
+
+main.cards section.card{
+    align-items: center;
+    text-align: center;
+    background: white;
+    padding: 3%;
+    width: 300px;
+    height: 200px;
+    border: 5px (255, 148, 49);
+    list-style: none;
+    flex-direction: column;
+}
+
+main.cards section.card:not(:first-child){
+    margin-left: 8%;
+}
+
+#institucional{
+    box-shadow: 10px 15px 40px rgb(255, 148, 49);
+}
+
+#troca{
+    box-shadow: 10px 20px 50px rgb(89, 144, 255);
+}
+
+#novidades{
+    box-shadow: 10px 20px 50px rgb(255, 148, 49);
+}
+
+:root{
+    --cor-laranja: rgb(255, 148, 49);
+}
+
+:root{
+    --cor-azul: rgb(89, 144, 255);
+}
+
+    /*reponsividade*/
+
+@media screen and (max-width: 860){
+    main.cards{
+        flex-direction: column;
+    }
+
+    main.cards section.card{
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    main.cards section.card:last-child{
+        margin-bottom: 0;
+    }
+    
+}
+
+#copyright{
+    background-image: linear-gradient(100deg, rgb(22, 22, 22), rgb(29, 56, 110));
+    color: white;
+    text-align: center;
+}

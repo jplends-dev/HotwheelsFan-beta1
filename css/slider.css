@@ -1,0 +1,122 @@
+img{
+    max-width:100%;
+    width: 1000px;
+    height: 90%;
+}
+
+.container-all{
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 1000px;
+    padding: 3%;
+    margin: auto;
+}
+
+
+.slide{
+    display: flex;
+    transform: translate3d(0, 0, 0);
+    transition: all 600ms;
+    animation-name: autoplay;
+    animation-duration: 6.5s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.item-slide{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+
+.pagination{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-all input{
+    display: none;
+}
+
+.pagination-item{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.pagination-item:not(:last-child){
+    margin-right: 40px;
+}
+
+
+.pagination-item:hover{
+    transform: scale(1.5);
+    background-color: rgb(255, 148, 49)
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+input[id="radio1"]:checked ~ .slide{
+    animation:none;
+    transform: translate3d(0, 0, 0);
+}
+
+input[id="radio1"]:checked ~ .pagination .pagination-item[for="radio1"]{
+    background: #fff;
+}
+
+input[id="radio2"]:checked ~ .slide{
+    animation:none;
+    transform: translate3d(calc(-100% * 1), 0, 0);
+}
+
+input[id="radio2"]:checked ~ .pagination .pagination-item[for="radio2"]{
+    background: #fff;
+}
+
+input[id="radio3"]:checked ~ .slide{
+    animation:none;
+    transform: translate3d(calc(-100% * 2), 0, 0);
+}
+
+input[id="radio3"]:checked ~ .pagination .pagination-item[for="radio3"]{
+    background: #fff;
+}
+
+
+@keyframes autoplay{
+    33%{
+        transform: translate3d(calc(-100% * 0), 0, 0);
+    }
+}
+
+@keyframes autoplay{
+    66%{
+        transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+}
+
+@keyframes autoplay{
+    100%{
+        transform: translate3d(calc(-100% * 2), 0, 0);
+    }
+}
